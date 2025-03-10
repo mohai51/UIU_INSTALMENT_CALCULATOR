@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installment Calculator Bro!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+    <div class="container">
+        <h1>TutionFee Calculator!</h1>
+        <form id="installmentForm">
+            <label for="totalAmount">Enter the total amount (in Taka):</label>
+            <input type="number" id="totalAmount" name="totalAmount" required>
+            <button type="submit">Calculate Installments</button>
+        </form>
+
+        <div id="result" class="hidden">
+            <h2>Installment Breakdown</h2>
+            <p>1st Installment (40%): <span id="firstInstallment"></span> Taka</p>
+            <p>2nd Installment (30%): <span id="secondInstallment"></span> Taka</p>
+            <p>3rd Installment (30%): <span id="thirdInstallment"></span> Taka</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('installmentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get the total amount from the input
+            const totalAmount = parseFloat(document.getElementById('totalAmount').value);
+
+            // Calculate installments
+            const firstInstallment = totalAmount * 0.40;
+            const secondInstallment = totalAmount * 0.30;
+            const thirdInstallment = totalAmount * 0.30;
+
+            // Display the results
+            document.getElementById('firstInstallment').textContent = firstInstallment.toFixed(2);
+            document.getElementById('secondInstallment').textContent = secondInstallment.toFixed(2);
+            document.getElementById('thirdInstallment').textContent = thirdInstallment.toFixed(2);
+
+            // Show the result section
+            document.getElementById('result').classList.remove('hidden');
+        });
+    </script>
+    
+</body>
+
+</html>
