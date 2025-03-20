@@ -1,5 +1,6 @@
+/* styles.css */
 body {
-    font-family:  sans-serif, sans-serif;
+    font-family: Arial, sans-serif;
     background-size: cover;
     background-image:url('Untitled\ design\ \(2\).png');
     margin: 0;
@@ -8,43 +9,39 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    
 }
 
 .container {
-    background-color: #1389a646;
+    background: #1389a646;
     padding: 20px;
-    border-radius: 18px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 64, 77, 0.1);
-    width: 500px;
     text-align: center;
+    width: 500px;
+
 }
-
-
 
 h1 {
+    color: #333;
+    font-size: 22px;
     margin-bottom: 20px;
-    color: #ffffff;
 }
-
 
 form {
     display: flex;
     flex-direction: column;
 }
 
-
-
 label {
-    margin-bottom: 10px;
     font-weight: bold;
+    margin-top: 10px;
 }
 
-input {
+select, input {
     padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #f4000073;
+    border-radius: 5px;
 }
 
 button {
@@ -60,15 +57,8 @@ button:hover {
     background-color: #00ff37;
 }
 
-#result {
-    margin-top: 20px;
-   
-}
-
 .hidden {
     display: none;
-    
-    
 }
 
 #result p {
@@ -81,3 +71,16 @@ button:hover {
     font-weight: bold;
     color: #fafafa;
 }
+
+
+
+p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
